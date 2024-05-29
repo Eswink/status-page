@@ -22,7 +22,7 @@ monitors:
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
     followRedirect: true # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true
+    linkable: true # allows the title to be a link, default=true
 
   - id: onedrive-eswlnk-com
     name: Eswlnk CloudDisk
@@ -39,7 +39,7 @@ monitors:
     method: GET
     expectStatus: 200
     followRedirect: true # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true
+    linkable: true # allows the title to be a link, default=true
 
   - id: blog-a-hacker-com
     name: 码农之家
@@ -47,4 +47,4 @@ monitors:
     method: GET
     expectStatus: 200
     followRedirect: true # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true
+    linkable: true # allows the title to be a link, default=true
