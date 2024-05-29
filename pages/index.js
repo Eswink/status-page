@@ -101,10 +101,10 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
           </div>
           <div>
             <a
-              href="https://github.com/eidam/cf-workers-status-page"
+              href="https://blog.eswlnk.com/"
               target="_blank"
             >
-              Get Your Status Page
+              Eswlnk Blog
             </a>
           </div>
         </div>
