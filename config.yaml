@@ -1,39 +1,50 @@
 settings:
-  title: 'Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
+  title: '服务器监控'
+  url: 'https://status.eswlnk.com' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
 
-  allmonitorsOperational: 'All Systems Operational'
-  notAllmonitorsOperational: 'Not All Systems Operational'
+  allmonitorsOperational: '所有系统运行正常'
+  notAllmonitorsOperational: '部分系统存在问题'
   monitorLabelOperational: 'Operational'
   monitorLabelNotOperational: 'Not Operational'
-  monitorLabelNoData: 'No data'
-  dayInHistogramNoData: 'No data'
-  dayInHistogramOperational: 'All good'
+  monitorLabelNoData: '无数据'
+  dayInHistogramNoData: '无数据'
+  dayInHistogramOperational: '优'
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
+  - id: blog-eswlnk-com # unique identifier
+    name: Eslwnk Blog
+    description: 'Eswlnk 博客' # default=empty
+    url: 'https://blog.eswlnk.com/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
-    followRedirect: false # should fetch follow redirects, default=false
+    followRedirect: true # should fetch follow redirects, default=false
     linkable: false # allows the title to be a link, default=true
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: onedrive-eswlnk-com
+    name: Eswlnk CloudDisk
+    description: 'Eswlnk 网盘'
+    url: 'https://onedrive.eswlnk.com/'
     method: GET
     expectStatus: 200
+    followRedirect: true # should fetch follow redirects, default=false
     linkable: true # allows the title to be a link, default=true
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: bbs-eswlnk-com
+    name: 码农社区
+    url: 'https://bbs.eswlnk.com/'
     method: GET
     expectStatus: 200
+    followRedirect: true # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
+
+  - id: blog-a-hacker-com
+    name: 码农之家
+    url: 'https://blog.a-hacker.com/'
+    method: GET
+    expectStatus: 200
+    followRedirect: true # should fetch follow redirects, default=false
+    linkable: false # allows the title to be a link, default=true
